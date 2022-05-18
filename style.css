@@ -1,0 +1,331 @@
+    /* font */
+
+
+/* reset */
+body {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Fira Sans', sans-serif;
+    background-color: grey;
+    color: #F9F9F9;
+}
+
+.action    {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin: 0px;
+}
+ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #fff;
+}
+button {
+    padding: 15px 10px;
+    font-size: 1.125rem;
+    border: 0;
+    border-radius: 10px;
+    background-color: #3d9bf5;
+    color: #F9F9F9;
+    cursor: pointer;
+}
+
+.menu,.header
+{
+    background: black;
+}
+
+/* header */
+.header {
+    max-width: 1200px;
+    padding: 40px 20px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    color: #fff;
+}
+.header-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.header-menu li a:hover {
+    color: #3d9bf5;
+    transition: all 0.5s ease;
+}
+
+/* Responsivo header */
+
+@media (max-width: 900px) {
+    .header {
+        padding: 20px 10px;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .header-menu {
+        margin-top: 20px;
+        gap: 30px;
+    }
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    /* height: 100vh; */
+}
+
+/* indrodução */
+.introducao {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0px;
+    transition: all 0.5s ease;
+}
+.text-intro {
+    width: 45%;
+    /* background-color: #222; */
+}
+.text-intro .bemvindo {
+    color: #3d9bf5;
+    font-weight: bold;
+    letter-spacing: 5px;
+    margin-bottom: 5px;
+}
+.text-intro h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+.text-intro span {
+    font-size: 1.5rem;
+}
+.images-intro img {
+    width: 600px;
+}
+.text-intro .btn {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+}
+.text-intro .btn button {
+    border: 2px solid #3d9bf5;
+}
+.text-intro .btn button:hover {
+    background-color:#222;
+    border: 2px solid #3d9bf5;
+    transition: all 0.5s ease;
+}
+.images-intro img {
+    border-radius: 50px 100px;
+}
+
+
+/* Responsivo indrodução */
+@media (max-width: 900px) {
+    .introducao {
+        max-width: 90%;
+        flex-direction: column;
+        margin-left: 5%;
+    }
+    .text-intro {
+        width: 80%; 
+    }
+    .text-intro h1 {
+        font-size: 2.5rem;
+    }
+    .images-intro img {
+        width: 400px;
+    }
+    .introducao .btn button {
+            padding: 10px 5px;
+            font-size: 1rem;
+    }
+}
+
+
+/* Sobre mim  */
+.sobre-mim {
+    text-align: center;
+    align-items: center;
+    line-height: 2rem;
+    background-color: #111;
+    border-radius: 10px;
+    color: #ddd;
+    padding: 10px 10px;
+    margin-bottom: 40px;
+}
+.sobre-mim h1 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #F9F9F9;
+}
+.sobre-mim p {
+    font-size: 1.125rem;
+}
+
+/* Responsivo sobre mim */
+@media (max-width: 800px) {
+    .sobre-mim {
+        line-height: 1.5rem;
+        padding: 10px 20px
+    }
+    .sobre-mim h1 {
+        font-size: 1.25rem;
+    }
+    .sobre-mim p {
+        font-size: 1rem;
+    }
+}
+
+/* Skills */
+.skills {
+    text-align: center;
+    padding: 40px;
+    background-color: #222;
+    border-radius: 20px;
+    margin-bottom: 40px;
+}
+.skills-images {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 40px;
+}
+.skills-images img {
+    width: 120px;
+    margin: 30px;
+    transition: all 0.8s ease;
+}
+.skills-images img:hover {
+    transform: scaleY(1.1);
+    background-color: #F9F9F9;
+    border-radius: 20%;
+}
+
+/* Responsivo skills*/
+@media (max-width: 800px) {
+    .skills-images img {
+        width: 90px;
+    }
+}
+
+/* portfolio */
+.portfolio {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background-color: #222;
+    /* margin-bottom: 40px;   */
+}
+.portfolio h1 {
+    margin-bottom: 40px;
+}
+.portfolio-items {
+    width: 900px;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #555;
+    margin-bottom: 40px;  
+}
+.portfolio-items .portifolio-informacao {
+    padding: 40px;
+    max-width: 500px;
+}
+.portfolio-items .portifolio-informacao a button {
+    border: 2px solid #3d9bf5;
+    transition: all 0.5s ease;
+    padding: 20px 50px;
+} 
+.portfolio-items .portifolio-informacao a button:hover {
+    background-color: #222;
+    border: 2px solid #3d9bf5;
+}
+.portfolio-items .portifolio-informacao h2,
+.portfolio-items .portifolio-informacao p,
+.portfolio-items .portifolio-informacao button {
+   margin-top: 20px;
+}
+.portfolio-items .portifolio-informacao p {
+    font-size: 1.125rem;
+}
+.portfolio-items img {
+    width: 450px;
+    align-self: flex-end;
+}
+
+/* Responsivo portfolio*/
+@media (max-width: 800px) {
+    .portfolio {
+        padding: 20px;
+        background-color: #222;
+    }
+    .portfolio-items {
+        width: auto;
+        height: 680px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap; 
+    }
+    .portfolio-items img {
+        width: 300px;
+        height: 300px;
+        align-self: auto;
+    }
+    .portfolio-items .portifolio-informacao {
+        justify-content: center;
+        padding: 40px 20px 0px 20px ;
+        text-align: center;
+    }
+    .portfolio-items .portifolio-informacao a button {
+        padding: 10px 40px;
+    } 
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 40px;
+    font-size: 1.5rem;
+}

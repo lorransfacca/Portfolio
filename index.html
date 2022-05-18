@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">  
+</head>
+<script>
+  let data=new Date();
+  let dia=data.getDate();
+  let mes=data.getMonth()+1;
+  let ano=data.getFullYear();
+</script>
+
+<body>
+  <header class="header">
+        <h2>Olá Devs/Recrutiers!</h2>
+      
+        <nav>
+          <ul class="header-menu">
+            <li><a href="#introducao">Início</a></li>
+            <li><a href="#skills">Soft Skills</a></li>
+            <li><a href="#Portifólio">Portifólio</a></li>
+            <li><img class="action"  src="img/lorrans.JPG.jpg"></li>
+            <li><a href="#acessibilidade" class="acessibilidade" id="contraste"><i class="material-icons" style="font-size:25px;">contrast</i></an></li>
+          </ul>
+        </nav>
+
+      </header>
+      
+      <main class="container" id="introducao">
+        <div class="introducao">
+          <div class="text-intro">
+            <p class="bemvindo">Seja Bem Vindo!</p>
+            <h1>Olá sou, <br />Lorrans Facca!</h1>
+            <span>Desenvolvedor Front-End</span>
+    
+          </div>
+          <div class="images-intro">
+            <img src="https://camo.githubusercontent.com/5d7d385afab3ba78abb058cf674f5b5405551bf3f461210d1de7b302b2367100/68747470733a2f2f7374617469632e696d6173746572732e636f6d2e62722f77702d636f6e74656e742f75706c6f6164732f323031352f31312f345f50726f67726573736f342e676966" alt="">
+          </div>
+        </div>
+        <div class="sobre-mim">
+            <h1>Sobre mim</h1>
+            <p>
+              Olá me chamo Lorrans Facca, sou desenvolvedor front-end, graduando em Análise e Desenvolvimento de sistemas, pelo Instituto Federal de São Paulo - IFSP, busco uma oportunidade de trabalho na área de desenvolvimento web.
+            </p>
+            <br>
+            <p>
+              Estou me qualificando constantimente a procura de cursos, desafios e experiências que acrescentem à minha formação e venha aumentar meu conhecimento pessoal, quanto profissional e da empresa que irei ingressar. Estou aberto a novos desafios, novos conhecimentos que me forem propostos.
+            </p>
+            <br>
+            <p>
+              Estou em busca de viver essa experiência o mais breve possível.
+            </p>
+          </div>
+      </main>
+      
+      <section id="skills" class="container">
+        <div class="skills">
+          <h1>Soft Skills</h1>
+      
+          <div class="skills-images">
+            <img src="./img/icon-html5.svg" alt="HTML5">
+            <img src="./img/icon-css.svg" alt="CSS">
+            <img src="./img/icon-bootstrap.svg" alt="Booststrap">
+            <img src="./img/icon-javascript.svg" alt="JavaScript">
+            <img src="./img/icon-git.svg" alt="Git">
+            <img class="icon-react" src="./img/icons8-reagir.svg" alt="React">
+          </div>
+        </div>
+      </section>
+      
+      <section id="Portifólio" class="container">
+        <div class="portfolio">
+          <h1>Portifólio</h1>
+
+            <div class="portfolio-items">
+                <div class="portifolio-informacao">
+                    <h2>Star Wars</h2>
+                    <p>Primeiro projeto criado 100% por mim, onde eu queria testar meu conhecimentos em JavaScript. Pela funcionalidades o projeto ficou conforme planejado.</p>
+                    <p>Foi usado HTML, CSS, JavaScript e Responsivo.</p>
+  
+                    <a href="https://lorransfacca.github.io/ProjetoStarWars/" target="_blank"><button>Projeto</button></a>
+                </div>
+            </div>
+           
+            <div class="portfolio-items">
+                <div class="portifolio-informacao">
+                <h2>Rádio Facca</h2>
+                <p>Segundo projeto criado 100% por mim, onde eu queria testar meu conhecimentos em JavaScript. Pela funcionalidades o projeto ficou conforme planejado.</p>
+                <p>Foi usado HTML, CSS, JavaScript e Responsivo.</p>
+  
+                <a href="https://lorransfacca.github.io/RadioFacca/" target="_blank"><button>Projeto</button></a>
+                </div>
+            </div>
+        
+            <div class="portfolio-items">
+                <div class="portifolio-informacao">
+                    <h2>Projeto Relogio</h2>
+                    <p>Primeiro projeto consumindo uma API, consumida do site Openweathermap. Nesse projeto colocamos, o nome da cidade e ele retorna Temperatura, velocidade e direção do vendo e o clima. </p>
+                    <p>Foi usado HTML, CSS, JavaScript e Responsivo.</p>
+      
+                    <a href="clima.html" target="_blank"><button>Projeto</button></a>
+               </div>
+            </div>
+        </div>
+      </section>
+      
+      <footer class="footer">
+        <div class="container">
+            <p>© 2017 - <script>document.write( ano + "<br>");</script><br>Desenvolvido por Lorrans Facca</p>
+        </div>
+      </footer>
+  
+  <script src="script.js"></script>
+</body>
+
+</html>
