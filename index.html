@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Portfólio</title>
+        <link href="style.css" rel="stylesheet" type="text/css" integrity="your-integrity-hash" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="your-integrity-hash" crossorigin="anonymous">
+    </head>
+    <script>
+        let data = new Date();
+        let dia = data.getDate();
+        let mes = data.getMonth() + 1;
+        let ano = data.getFullYear();
+    </script>
+    <style>
+        body
+        {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: 'Fira Sans', sans-serif;
+            background-color: grey;
+            color: #F9F9F9;
+        }
+
+        .action    
+        {
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+        }
+
+        img 
+        {
+            max-width: 100%;
+            display: block;
+        }
+
+        h1,h2,h3,p 
+        {
+            margin: 0px;
+            font-weight:bold;
+        }
+
+        .hdois
+        {
+            font-size: 25px;
+        }
+
+        ul 
+        {
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+        }
+
+        a 
+        {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        button
+        {
+            padding: 15px 10px;
+            font-size: 1.125rem;
+            border: 0;
+            border-radius: 10px;
+            background-color: #3d9bf5;
+            color: #F9F9F9;
+            cursor: pointer;
+        }
+
+        .menu,.header
+        {
+            background: black;
+        }
+
+        /* header */
+        .header
+        {
+            max-width: 1200px;
+            padding: 40px 20px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: center;
+            color: #fff;
+        }
+
+        .header-menu
+        {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+            justify-content: center;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .header-menu li a:hover
+        {
+            color: #3d9bf5;
+            transition: all 0.5s ease;
+        }
+
+        @media (max-width: 900px)
+        {
+            .header {
+                padding: 20px 10px;
+                justify-content: center;
+                flex-direction: column;
+                flex-wrap: wrap;
+            }
+            .header-menu {
+                margin-top: 20px;
+                gap: 30px;
+            }
+        }
+
+        .container 
+        {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .introducao
+        {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px 0px;
+            transition: all 0.5s ease;
+        }
+
+
+        .text-intro 
+        {
+            width: 45%;
+        }
+
+        .text-intro .bemvindo 
+        {
+            color: #3d9bf5;
+            font-weight: bold;
+            letter-spacing: 5px;
+            margin-bottom: 5px;
+        }
+
+        .text-intro h1 
+        {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .text-intro span 
+        {
+            font-size: 1.5rem;
+        }
+
+        .images-intro img 
+        {
+            width: 600px;
+        }
+
+        .text-intro .btn 
+        {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            margin-bottom: 20px;   
+        }
+
+        .text-intro .btn button 
+        {
+            border: 2px solid #3d9bf5;
+        }
+
+        .text-intro .btn button:hover 
+        {
+            background-color:#222;
+            border: 2px solid #3d9bf5;
+            transition: all 0.5s ease;
+        }
+
+        .images-intro img 
+        {
+            border-radius: 50px 100px;
+        }
+
+        @media (max-width: 900px) 
+        {
+            .introducao {
+                max-width: 90%;
+                flex-direction: column;
+                margin-left: 5%;
+            }
+            .text-intro {
+                width: 80%; 
+            }
+            .text-intro h1 {
+                font-size: 2.5rem;
+            }
+            .images-intro img {
+                width: 400px;
+            }
+            .introducao .btn button {
+                    padding: 10px 5px;
+                    font-size: 1rem;
+            }
+        }
+
+        .sobre-mim 
+        {
+            text-align: center;
+            align-items: center;
+            line-height: 2rem;
+            background-color: #111;
+            border-radius: 10px;
+            color: #ddd;
+            padding: 10px 10px;
+            margin-bottom: 40px;
+        }
+
+        .sobre-mim h1 
+        {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            color: #F9F9F9;
+        }
+
+        .sobre-mim p 
+        {
+            font-size: 1.125rem;
+        }
+
+        @media (max-width: 800px) 
+        {
+            .sobre-mim {
+                line-height: 1.5rem;
+                padding: 10px 20px
+            }
+            .sobre-mim h1 {
+                font-size: 1.25rem;
+            }
+            .sobre-mim p {
+                font-size: 1rem;
+            }
+        }
+
+        .skills 
+        {
+            text-align: center;
+            padding: 40px;
+            background-color: #222;
+            border-radius: 20px;
+            margin-bottom: 40px;
+        }
+
+        .skills-images 
+        {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 40px;
+        }
+
+        .skills-images img 
+        {
+            width: 120px;
+            margin: 30px;
+            transition: all 0.8s ease;
+        }
+
+        .skills-images img:hover
+        {
+            transform: scaleY(1.1);
+            background-color: #F9F9F9;
+            border-radius: 20%;
+        }
+
+        @media (max-width: 800px) 
+        {
+            .skills-images img {
+                width: 90px;
+            }
+        }
+
+        .portfolio 
+        {
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap; /* Adicione o flex-wrap: wrap; para que os itens possam ser embrulhados */
+            justify-content: space-around; /* Ajuste conforme necessário */
+            align-items: center;
+            padding: 40px;
+            background-color: #222;
+        }
+
+        .portfolio h1 
+        {
+            width: 100%; /* Certifique-se de que o título ocupa a largura total */
+            margin-bottom: 40px;
+            text-align: center; /* Centralize o texto */
+        }
+
+        .portfolio .col-5 
+        {
+            flex: 0 0 calc(20% - 30px);
+            max-width: calc(20% - 30px);
+            padding: 0;
+            margin-bottom: 20px; /* Adicione uma margem inferior entre os itens */
+        }
+
+        .portfolio-items 
+        {
+            width: 100%; /* Full width for each portfolio item */
+            max-width: 300px;/* Adjust the maximum width as per your design */
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            background-color: #555;
+            margin-bottom: 40px;
+            margin-right: 20px; /* Add margin between portfolio items */
+        }
+
+        .portfolio-items .portifolio-informacao
+        {
+            max-height: 500px;
+            overflow: hidden;
+            padding: 20px; /* Adjust padding for portfolio item information */
+            max-width: 300px;
+        }
+
+        .portfolio-items .portifolio-informacao a button 
+        {
+            border: 2px solid #3d9bf5;
+            transition: all 0.5s ease;
+            padding: 15px 30px; /* Adjust button padding */
+            align-items: center;
+        }
+
+        .portfolio-items .portifolio-informacao a button:hover 
+        {
+            background-color: #222;
+            border: 2px solid #3d9bf5;
+            align-items: center;
+        }
+
+        .portfolio-items h2,
+        .portfolio-items p,
+        .portfolio-items button 
+        {
+            margin-top: 20px;
+        }
+
+        .portfolio-items p 
+        {
+            font-size: 0.90rem; /* Adjust font size for portfolio item description */
+        }
+
+        .portfolio-items img 
+        {
+            width: 100%; /* Make images responsive and take full width */
+            max-width: 100%;
+            align-self: flex-end;
+        }
+
+        @media (max-width: 800px) 
+        {
+            .portfolio-items 
+            {
+                width: auto;
+                height: auto;
+                max-width: calc(100% - 20px); /* Adjust the maximum width for smaller screens */
+                display: flex;
+                flex-direction: column;
+            }
+
+            .portfolio-items img 
+            {
+                width: 100%; /* Make images responsive and take full width */
+                max-width: 100%;
+                height: auto;
+                align-self: center;
+            }
+
+            .portfolio-items .portifolio-informacao 
+            {
+                padding: 20px; /* Adjust padding for portfolio item information */
+                text-align: center;
+            }
+
+            .portfolio-items .portifolio-informacao a button 
+            {
+                padding: 15px 30px; /* Adjust button padding */
+            }
+        }
+
+        .footer
+        {
+            text-align: center;
+            padding: 40px;
+            font-size: 1.5rem;
+        }
+
+        .h2 ,#texto 
+        {
+            text-align: center;
+            font-weight:bold;
+            filter: drop-shadow(0 0 100px var(--clr));
+            animation: animate 
+            3s linear infinite;
+        }
+
+        @keyframes animate 
+        {
+            0% 
+            {
+                opacity: 0;
+            }
+
+            50% 
+            {
+                opacity: 0.7;
+            }
+
+            100%
+            {
+                opacity: 0;
+            }
+        }
+
+        .row 
+        {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -15px;
+        }
+
+        .col-5 
+        {
+            flex: 0 0 calc(20% - 30px);
+            max-width: calc(20% - 30px);
+            padding: 0;
+        }
+
+        @media (max-width: 1200px)
+        {
+            .portfolio .col-5 
+            {
+                flex: 0 0 calc(25% - 30px);
+                max-width: calc(25% - 30px);
+            }
+        }
+
+        @media (max-width: 900px) 
+        {
+            .portfolio .col-5 
+            {
+                flex: 0 0 calc(50% - 30px);
+                max-width: calc(50% - 30px);
+            }
+        }
+
+    </style>
+    <body>
+        <header class="header">
+            <h2><span id="texto"> <font color="#3d9bf5"> Olá Devs/Recruits! </font></span></h2>
+            <nav>
+                <ul class="header-menu">
+                <li><a href="#introducao">Início</a></li>
+                <li><a href="#skills">Soft Skills</a></li>
+                <li><a href="#Portifólio">Portfólio</a></li>
+                <li><img class="action"  src="img/lorrans.JPG.jpg"></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="container" id="introducao">
+            <div class="introducao">
+                <div class="text-intro">
+                    <p class="bemvindo">Seja Bem Vindo!</p>
+                    <h1>Olá sou, <br />Lorrans Facca!</h1>
+                    <span>Desenvolvedor / Programador</span>
+                </div>
+                <div class="images-intro">
+                    <img src="https://camo.githubusercontent.com/5d7d385afab3ba78abb058cf674f5b5405551bf3f461210d1de7b302b2367100/68747470733a2f2f7374617469632e696d6173746572732e636f6d2e62722f77702d636f6e74656e742f75706c6f6164732f323031352f31312f345f50726f67726573736f342e676966" alt="">
+                </div>
+            </div>
+            <div class="sobre-mim">
+                <h1>Sobre mim</h1>
+                <p>
+                Sou desenvolvedor, graduando em Análise e Desenvolvimento de sistemas, pelo Instituto Federal de São Paulo - IFSP</p> busco uma oportunidade de trabalho na área de desenvolvimento web.
+                </p>
+               
+                <p>
+                Estou me qualificando constantimente a procura de cursos, desafios e experiências que acrescentem à minha formação e venha aumentar </p>meu conhecimento pessoal, quanto profissional e da empresa que irei ingressar.</p> Estou aberto a novos desafios, novos conhecimentos que me forem propostos.
+                </p>
+            
+                <p>
+                Estou em busca de viver essa experiência o mais breve possível.
+                </p>
+            </div>
+        </main>
+        <section id="skills" class="container">
+            <div class="skills">
+                <h1>Soft Skills</h1>
+                <div class="skills-images">
+                <img src="./img/icon-html5.svg" alt="HTML5">
+                <img src="./img/icon-css.svg" alt="CSS">
+                <img src="./img/icon-bootstrap.svg" alt="Booststrap">
+                <img src="./img/icon-javascript.svg" alt="JavaScript">
+                <img src="./img/icon-git.svg" alt="Git">
+                <img class="icon-react" src="./img/icons8-reagir.svg" alt="React">
+                </div>
+            </div>
+        </section>
+        <section id="Portifólio" class="container">
+            <div class="portfolio row">
+                <h1>Portfólio</h1>
+                <div class="col-5">
+                    <div class="portfolio-items">
+                        <div class="portifolio-informacao">
+                            <h2 class="hdois">Star Wars</h2>
+                            <p>projeto criado 100% por mim,
+                            Foi usado Angular Bootstrap, HTML, CSS, JavaScript e Responsivo.</p>
+        
+                            <a href="https://lorransfacca.github.io/ProjetoStarWars/" target="_blank"><button>Projeto</button></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-5">
+                    <div class="portfolio-items">
+                        <div class="portifolio-informacao">
+                            <h2 class="hdois">Rádio Facca</h2>
+                            <p>projeto criado 100% por mim,
+                            Foi usado Bootstrap, HTML, CSS, JavaScript e Responsivo.</p>
+            
+                            <a href="https://lorransfacca.github.io/RadioFacca/" target="_blank"><button>Projeto</button></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-5">
+                    <div class="portfolio-items">
+                            <div class="portifolio-informacao">
+                                <h2 class="hdois">Relógio</h2>
+                                <p>projeto criado 100% por mim,
+                                Foi usado HTML, CSS, JavaScript e Responsivo.</p>
+                
+                                <a href="https://lorransfacca.github.io/Design-de-Relogio-Analogico-e-Digital/" target="_blank"><button>Projeto</button></a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+                <div class="portfolio row">
+                <div class="col-5">
+                    <div class="portfolio-items">
+                        <div class="portifolio-informacao">
+                            <h2 class="hdois">Relógio de Status</h2>
+                            <p>projeto criado 100% por mim,
+                            Foi usado HTML, CSS, JavaScript e Responsivo.</p>
+            
+                            <a href="https://lorransfacca.github.io/Relogio-de-Status/" target="_blank"><button>Projeto</button></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-5">
+                    <div class="portfolio-items">
+                        <div class="portifolio-informacao">
+                            <h2 class="hdois">Bora Tomar Remédio</h2>
+                            <p>projeto criado 100% por mim,
+                            Foi usado HTML, CSS, JavaScript e Responsivo.</p>
+        
+                            <a href="https://lorransfacca.github.io/Bora-Tomar-Rem-dio/" target="_blank"><button>Projeto</button></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-5">
+                    <div class="portfolio-items">
+                        <div class="portifolio-informacao">
+                            <h2 class="hdois">Roleta da Sorte</h2>
+                            <p>projeto criado 100% por mim,
+                            Foi usado HTML, CSS, JavaScript e Responsivo.</p>
+        
+                            <a href="https://lorransfacca.github.io//" target="_blank"><button>Projeto</button></a>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            
+        </section>
+        <footer class="footer">
+            <div class="container">
+                <p>© 2017 - <script>document.write( ano + "<br>");</script><br>Desenvolvido por Lorrans Facca</p>
+            </div>
+        </footer>
+    </body>
+</html>
